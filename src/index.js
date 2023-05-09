@@ -1,11 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import allRecipesData from "./data";
+import { Provider } from "react-redux";
+
 import App from "./app/App";
+import store from "./app/store";
+
+if (process.env.NODE_ENV === "development") {
+  const { worker } = require("./mocks/browser");
+  worker.start();
+}
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-    <App allRecipes={allRecipesData} />
-  </React.StrictMode>
+  <Provider store={store}>
+    <App />
+  </Provider>
 );

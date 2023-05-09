@@ -14,3 +14,40 @@ body,
   flex-direction: column;
   color: #141c3a;
 }
+
+.header {
+  font-size: 32px;
+  font-weight: bold;
+  color: #141c3a;
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+#recipes-wrapper {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.recipes-section {
+  padding: 32px 36px;
+}
+
+#error-wrapper {
+  text-align: center;
+}
+
+.spinner {
+  display: block;
+  margin: 0 auto;
+  animation: rotation 2s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}

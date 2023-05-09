@@ -1,9 +1,8 @@
-import React from "react";
-
-export default function FavoriteButton() {
+export default function FavoriteButton({ icon, onClickHandler, children }) {
   return (
-    <button className="favorite-button">
-      <i className="fa-solid fa-star star-icon"></i>Add to favorites
+    <button className="favorite-button" onClick={onClickHandler}>
+      {icon}
+      {children}
     </button>
   );
 }
